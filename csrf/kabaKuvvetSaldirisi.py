@@ -1,3 +1,7 @@
+"""
+author: Beren Kuday GÖRÜN
+"""
+
 import requests
 from bs4 import BeautifulSoup
 #pip3 install bs4
